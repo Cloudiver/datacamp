@@ -63,7 +63,7 @@ np_baseball = np.array(baseball)
 print(np_baseball + updated)    # 加法运算  列数需要相等
 
 # Create numpy array: conversion
-conversion = np.array([0.0254, 0.453592, 1])
+conversion = np.array([0.0254, 0.453592, 1])   # 或者 conversion = np.array((0.0254, 0.453592, 1))   # 用双括号
 
 # Print out product of np_baseball and conversion
 print(np_baseball * conversion)  # 乘法运算  列数需要相等
@@ -85,7 +85,6 @@ print(np.median(np_height_in))  # 中位数
 
 
 # np_baseball is available
-
 # Import numpy
 import numpy as np
 
@@ -102,7 +101,7 @@ stddev = np.std(np_baseball[:,0])
 print("Standard Deviation: " + str(stddev))   # 标准差
 
 # Print out correlation between first and second column. Replace 'None'
-corr = np.corrcoef(np_baseball[:,0], np_baseball[:,1])   # 系列相关系数
+corr = np.corrcoef(np_baseball[:,0], np_baseball[:,1])   # 系列相关系数(函数有2个相关系数)
 print("Correlation: " + str(corr))
 
 

@@ -8,7 +8,7 @@ print(pop[-1])
 import matplotlib.pyplot as plt
 
 # Make a line plot: year on the x-axis, pop on the y-axis
-plt.plot(year, pop)
+plt.plot(year, pop)   # (x,y)
 
 # Display the plot with plt.show()
 plt.show()

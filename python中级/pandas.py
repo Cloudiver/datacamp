@@ -32,7 +32,7 @@ print(cars)
 row_labels = ['US', 'AUS', 'JPN', 'IN', 'RU', 'MOR', 'EG']
 
 # Specify row labels of cars
-cars.index = row_labels  # 表格索引设置
+cars.index = row_labels  # 表格行索引设置
 
 # Print cars again
 print(cars)

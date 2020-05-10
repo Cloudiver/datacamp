@@ -3,7 +3,7 @@ True == 1
 False == 0
 # bool要么是 True or False | 1 or 0
 
-"abc" <= "b"   # 根据首字母排序
+"abc" <= "b"   # True 根据首字母排序
 
 
 # -----------------NumPy数组比较----------------
@@ -13,10 +13,10 @@ my_house = np.array([18.0, 20.0, 10.75, 9.50])
 your_house = np.array([14.0, 24.0, 14.25, 9.0])
 
 # my_house greater than or equal to 18
-print(my_house >= 18)  # 返回bool值
+print(my_house >= 18)  # 返回bool值  numpy.ndarray
 
 # my_house less than your_house
-print(my_house < your_house)
+print(my_house < your_house)  # 返回bool值  # numpy.ndarray
 
 
 
@@ -31,10 +31,10 @@ my_house = np.array([18.0, 20.0, 10.75, 9.50])
 your_house = np.array([14.0, 24.0, 14.25, 9.0])
 
 # my_house greater than 18.5 or smaller than 10
-print(np.logical_or(my_house > 18.5, my_house < 10))  # 对应or
+print(np.logical_or(my_house > 18.5, my_house < 10))  # 对应or   输出: [False  True False  True]
 
 # Both my_house and your_house smaller than 11
-print(np.logical_and(my_house < 11, your_house < 11))  # 对应 and
+print(np.logical_and(my_house < 11, your_house < 11))  # 对应 and  输出: [False False False  True]
 
 														# np.logical_not() 对应 not
 
@@ -84,6 +84,7 @@ import numpy as np
 
 # Create medium: observations with cars_per_cap between 100 and 500
 medium = cars[np.logical_and(cars['cars_per_cap'] > 100, cars['cars_per_cap'] < 500)]
+# cars['cars_per_cap'] > 100  返回bool序列
 
 # Print medium
 print(medium)
