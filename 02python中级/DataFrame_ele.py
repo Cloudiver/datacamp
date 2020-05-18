@@ -26,6 +26,11 @@ print(cars[3:])
 
 
 # --------------------读取DataFrame中行元素(DataFrame对象 loc函数)-----------------
+"""
+注: loc 和 iloc的区别
+
+
+"""
 # loc 使用行标签
 # iloc 使用行索引
 
