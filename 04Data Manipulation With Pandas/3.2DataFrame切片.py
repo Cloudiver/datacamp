@@ -9,7 +9,7 @@ print(temperatures_srt.loc['Pakistan':'Russia'])  # 首尾都包含在内
 print(temperatures_srt.loc['Lahore':'Moscow'])  # 返回混乱的数据
 
 # Subset rows from Pakistan, Lahore to Russia, Moscow
-print(temperatures_srt.loc[('Pakistan', 'Lahore'):('Russia', 'Moscow')])  # 传入元组, 必须匹配元组中的内容
+print(temperatures_srt.loc[('Pakistan', 'Lahore'):('Russia', 'Moscow')])  # 传入元组, country 和 city 同时满足
 # 选择country = Pakistan, city = Lahore  和  country = Russia, city = Moscow
 
 

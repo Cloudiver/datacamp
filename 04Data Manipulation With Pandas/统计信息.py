@@ -20,7 +20,7 @@ print(sales['date'].max())   # 最大值
 print(sales['date'].min())  # 最小值
 
 
-# A custom IQR function    # 四分位数
+# A custom IQR function    # 四分位数(这里不太理解)
 def iqr(column):
     return column.quantile(0.75) - column.quantile(0.25)
     
@@ -48,7 +48,7 @@ print(sales[["temperature_c", "fuel_price_usd_per_l", "unemployment"]].agg([iqr,
 sales_1_1 = sales_1_1.sort_values('date')   # 排序
 
 # Get the cumulative sum of weekly_sales, add as cum_weekly_sales col
-sales_1_1['cum_weekly_sales'] = sales_1_1['weekly_sales'].cumsum()   # 返回累加值
+sales_1_1['cum_weekly_sales'] = sales_1_1['weekly_sales'].cumsum()   # 返回累加值并添加新列
 
 # Get the cumulative max of weekly_sales, add as cum_max_sales col
 sales_1_1['cum_max_sales'] = sales_1_1['weekly_sales'].cummax()  # 返回累积最大值  取得最大值后保存, 然后依次和后面的值比较
@@ -150,9 +150,10 @@ print(unemp_fuel_stats)
 
 # -----------------透视表--------
 # 参考资料:https://zhuanlan.zhihu.com/p/31952948
+# 数据透视表每列的类型相同
 
 # Pivot for mean weekly_sales for each store type
- # 根据index分类, 然后只显示values值 返回分类的平均值
+ # 根据index  (列)分类, 然后只显示values值 返回分类的平均值
 mean_sales_by_type = sales.pivot_table(values="weekly_sales", index="type")  
 
 # Print mean_sales_by_type
